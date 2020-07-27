@@ -2,10 +2,10 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { FacilityService } from './facility.service';
 import { getModelToken } from '@nestjs/mongoose';
 
-describe('UniversityService', () => {
+describe('FacilityService', () => {
   let service: FacilityService;
 
-  function mockUniversityModel(dto: any) {
+  function mockFacilityModel(dto: any) {
     this.data = dto;
 
     this.save = () => {
@@ -19,7 +19,7 @@ describe('UniversityService', () => {
         FacilityService,
         {
           provide: getModelToken('Facilities'),
-          useValue: mockUniversityModel,
+          useValue: mockFacilityModel,
         },
       ],
     }).compile();

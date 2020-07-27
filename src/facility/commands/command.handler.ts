@@ -4,26 +4,24 @@ import { RpcException } from '@nestjs/microservices';
 import { FacilityService } from '../facility.service';
 import { Facility } from '../facility.schema';
 import { Command } from './command';
-import { CreateUniversityCommand } from './createUniversity.command';
+import { CreateFacilityCommand } from './createFacility.command';
 
 @Injectable()
 export class CommandHandler {
-  constructor(private universityService: FacilityService) {}
+  constructor(private facilityService: FacilityService) {}
 
   async handler(command: Command): Promise<Facility> {
     switch (command.action) {
-      case 'CreateUniversity':
-        return this.handleCreateUniversityCommand(
-          command as CreateUniversityCommand,
+      case 'CreateFacility':
+        return this.handleCreateFacilityCommand(
+          command as CreateFacilityCommand,
         );
       default:
         throw new RpcException(`Unsupported command action: ${command.action}`);
     }
   }
 
-  private async handleCreateUniversityCommand(
-    command: CreateUniversityCommand,
-  ) {
-    return this.universityService.createOne(command.data);
+  private async handleCreateFacilityCommand(command: CreateFacilityCommand) {
+    return this.facilityService.createOne(command.data);
   }
 }

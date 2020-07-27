@@ -8,7 +8,7 @@ import { Event } from './event';
 
 @Injectable()
 export class EventHandler {
-  constructor(private universityService: FacilityService) {}
+  constructor(private facilityService: FacilityService) {}
 
   async handleEvent(event: Event): Promise<Facility> {
     switch (event.action) {
@@ -24,6 +24,6 @@ export class EventHandler {
   private async handleStudentEnrolledEvent(
     event: StudentEnrolledEvent,
   ): Promise<Facility> {
-    return this.universityService.enroll(event.data);
+    return this.facilityService.enroll(event.data);
   }
 }

@@ -20,7 +20,6 @@ import { Roles } from '../auth/auth.decorator';
 import { RoleGuard } from '../auth/auth.guard';
 import { ExceptionFilter } from '../kafka/kafka.exception.filter';
 import { Command } from './commands/command';
-import { CreateUniversityDto } from './dto/createUniversity.dto';
 import { Event } from './events/event';
 import { Config } from '../config/config.interface';
 import { CommandHandler } from './commands/command.handler';
@@ -28,6 +27,7 @@ import { EventHandler } from './events/event.handler';
 import { Evt } from '../kafka/event.decorator';
 import { Facility } from './facility.schema';
 import { FacilityService } from './facility.service';
+import { CreateFacilityDto } from './dto/createFacility.dto';
 
 @Controller('facility')
 @UseGuards(RoleGuard)
@@ -38,7 +38,7 @@ export class FacilityController {
     @Inject('CONFIG') private config: Config,
     private commandHandler: CommandHandler,
     private eventHandler: EventHandler,
-    private universityService: FacilityService,
+    private facilityService: FacilityService,
   ) {}
 
   // ---------------- REST --------------------
@@ -46,55 +46,49 @@ export class FacilityController {
   @Post('')
   @Roles('Create')
   @UsePipes(ValidationPipe)
-  async createOne(@Body() dto: CreateUniversityDto): Promise<Facility> {
-    const university: Facility = await this.universityService.createOne(dto);
+  async createOne(@Body() dto: CreateFacilityDto): Promise<Facility> {
+    const facility: Facility = await this.facilityService.createOne(dto);
 
     const event = {
       id: uuid(),
       type: 'event',
-      action: 'UniversityCreated',
+      action: 'FacilityCreated',
       timestamp: Date.now(),
-      data: university,
+      data: facility,
     };
 
-    this.kafkaClient.emit(
-      `${this.config.kafka.prefix}-university-event`,
-      event,
-    );
+    this.kafkaClient.emit(`${this.config.kafka.prefix}-facility-event`, event);
 
-    return university;
+    return facility;
   }
 
   @Roles('Read')
   @Get('')
   async getAll(): Promise<Facility[]> {
-    return this.universityService.findAll();
+    return this.facilityService.findAll();
   }
 
   @Get('/:id')
   async getOne(@Param('id', new MongoPipe()) id: string) {
-    return this.universityService.findOne(id);
+    return this.facilityService.findOne(id);
   }
 
   // ---------------- CRQS --------------------
 
-  @KafkaTopic(`university-command`) async onCommand(
+  @KafkaTopic(`facility-command`) async onCommand(
     @Cmd() command: Command,
   ): Promise<void> {
-    const university: Facility = await this.commandHandler.handler(command);
+    const facility: Facility = await this.commandHandler.handler(command);
 
     const event = {
       id: uuid(),
       type: 'event',
-      action: 'UniversityCreated',
+      action: 'FacilityCreated',
       timestamp: Date.now(),
-      data: university,
+      data: facility,
     };
 
-    this.kafkaClient.emit(
-      `${this.config.kafka.prefix}-university-event`,
-      event,
-    );
+    this.kafkaClient.emit(`${this.config.kafka.prefix}-facility-event`, event);
 
     return;
   }
