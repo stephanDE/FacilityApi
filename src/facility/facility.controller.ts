@@ -26,19 +26,19 @@ import { Config } from '../config/config.interface';
 import { CommandHandler } from './commands/command.handler';
 import { EventHandler } from './events/event.handler';
 import { Evt } from '../kafka/event.decorator';
-import { University } from './university.schema';
-import { UniversityService } from './university.service';
+import { Facility } from './facility.schema';
+import { FacilityService } from './facility.service';
 
 @Controller('facility')
 @UseGuards(RoleGuard)
 @UseFilters(ExceptionFilter)
-export class UniversityController {
+export class FacilityController {
   constructor(
     @Inject('KAFKA_SERVICE') private kafkaClient: ClientKafka,
     @Inject('CONFIG') private config: Config,
     private commandHandler: CommandHandler,
     private eventHandler: EventHandler,
-    private universityService: UniversityService,
+    private universityService: FacilityService,
   ) {}
 
   // ---------------- REST --------------------
@@ -46,8 +46,8 @@ export class UniversityController {
   @Post('')
   @Roles('Create')
   @UsePipes(ValidationPipe)
-  async createOne(@Body() dto: CreateUniversityDto): Promise<University> {
-    const university: University = await this.universityService.createOne(dto);
+  async createOne(@Body() dto: CreateUniversityDto): Promise<Facility> {
+    const university: Facility = await this.universityService.createOne(dto);
 
     const event = {
       id: uuid(),
@@ -67,7 +67,7 @@ export class UniversityController {
 
   @Roles('Read')
   @Get('')
-  async getAll(): Promise<University[]> {
+  async getAll(): Promise<Facility[]> {
     return this.universityService.findAll();
   }
 
@@ -81,7 +81,7 @@ export class UniversityController {
   @KafkaTopic(`university-command`) async onCommand(
     @Cmd() command: Command,
   ): Promise<void> {
-    const university: University = await this.commandHandler.handler(command);
+    const university: Facility = await this.commandHandler.handler(command);
 
     const event = {
       id: uuid(),

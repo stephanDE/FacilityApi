@@ -3,8 +3,8 @@ import { plainToClass } from 'class-transformer';
 import { validate } from 'class-validator';
 import { RpcException } from '@nestjs/microservices';
 
-import { Command } from '../university/commands/command';
-import { CreateUniversityCommand } from '../university/commands/createUniversity.command';
+import { Command } from '../facility/commands/command';
+import { CreateUniversityCommand } from '../facility/commands/createUniversity.command';
 
 export const Cmd = createParamDecorator(
   async (data: unknown, ctx: ExecutionContext) => {

@@ -2,11 +2,12 @@ import { Module, NestModule, MiddlewareConsumer } from '@nestjs/common';
 import { JwtModule } from '@nestjs/jwt';
 import { MongooseModule } from '@nestjs/mongoose';
 
-import { UniversityModule } from './university/university.module';
+import { FacilityModule } from './facility/facility.module';
 import { ConfigModule } from './config/config.module';
 import { ConfigService } from './config/config.service';
 import { AuthMiddleware } from './auth/auth.middleware';
 import { KafkaModule } from './kafka/kafka.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -25,13 +26,14 @@ import { KafkaModule } from './kafka/kafka.module';
     }),
     KafkaModule.forRootAsync(),
     ConfigModule.forRoot(),
-    UniversityModule,
+    FacilityModule,
+    AuthModule,
   ],
   controllers: [],
   providers: [],
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
-    consumer.apply(AuthMiddleware).forRoutes('*');
+    //consumer.apply(AuthMiddleware).forRoutes('*');
   }
 }

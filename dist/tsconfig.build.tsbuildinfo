@@ -2687,7 +2687,7 @@
         "affectsGlobalScope": false
       },
       "../src/config/config.service.ts": {
-        "version": "a07d003dcf80f92af5ae765848916b49c77eae0ad73c46a9cea7661dfd05a816",
+        "version": "9ed322fdf5cb5c63c4b9c487fd369aaf62e5a147a348014be8ba92d299489965",
         "signature": "f6d466aa2471b076d071a011473d87ad484cd982c17b5b16566880841076ef7a",
         "affectsGlobalScope": false
       },
@@ -2731,18 +2731,18 @@
         "signature": "097d4bf3331df1e138ffdcf92e1117f6841bc8337170d927fd955d5ee8a1674b",
         "affectsGlobalScope": false
       },
-      "../src/university/commands/command.ts": {
+      "../src/facility/commands/command.ts": {
         "version": "211c6fc52eeac4d789c5732e20995f198a3a64b5c84479a3f1f131859019a630",
         "signature": "e1508a4893f2107150ca231c7ae70685cf26324df3abd6769e4df78890fc4b24",
         "affectsGlobalScope": false
       },
-      "../src/university/commands/createUniversity.command.ts": {
+      "../src/facility/commands/createUniversity.command.ts": {
         "version": "581d15096ea94062fca11f75f8bfb1f2f515bd0c90cfd09e15b1382e78291ae6",
         "signature": "9f79af88edf05ab032d798d318791490076e9aec8d45246865a784ac6274e313",
         "affectsGlobalScope": false
       },
       "../src/kafka/command.decorator.ts": {
-        "version": "55c6bd4e5b7a9b8f75627a66dd09d8a2c6d5709d9abfc7fd9825b5c1a97b89c6",
+        "version": "94ad23627b03d77fa6f57a8f50c9c5ee2ad35a594a66d8bc0325b0ddcbf2890f",
         "signature": "1656bb1f0967fe3e02c2cd58daa19f15793cbac7aff772fdb10f3d6249276ef5",
         "affectsGlobalScope": false
       },
@@ -2766,49 +2766,49 @@
         "signature": "b5939b85d875b85b90d6431053b9ccabe0e9a49be66da21799f1beadba21a129",
         "affectsGlobalScope": false
       },
-      "../src/university/dto/createUniversity.dto.ts": {
+      "../src/facility/dto/createUniversity.dto.ts": {
         "version": "f1982b8c2a19e6df7832dc36df33ec94be1b222523e97afde2833f16b1623425",
         "signature": "92c3e7ad4b6cd931b3c2ce4f2c3c3e96faee911b4098429bb6e0b1f68978846b",
         "affectsGlobalScope": false
       },
-      "../src/university/events/event.ts": {
+      "../src/facility/events/event.ts": {
         "version": "ecedb888e03b8fc4a8b1545bd7f051fd899642c184dbff65e13c96a2bcc026a9",
         "signature": "845fe3854b127c83a510856bbe7ecb08c162610e6e5fe1c9bbeab535d0c6f186",
         "affectsGlobalScope": false
       },
-      "../src/university/university.schema.ts": {
-        "version": "43a233165339f17af9593dab198d75ea58f257db0b526792c168be07eb795dea",
-        "signature": "77efcde9534d4263ae81d53e9ca15344db006ba3d2179514dadbe975dce2b30d",
+      "../src/facility/facility.schema.ts": {
+        "version": "909603bb97e5503bfa7cb030155497675823bfea48c07d5703aa0d4af9415d36",
+        "signature": "5f86fb26ce531f5d8c688d9dd1937bd8b03c21f60046a83ad0e2ba816e2f54fd",
         "affectsGlobalScope": false
       },
-      "../src/university/events/studentEnrolled.event.ts": {
+      "../src/facility/events/studentEnrolled.event.ts": {
         "version": "24797220041064d6b3e802b1644285a57bd575e86174a4d160a94bbf405c26e2",
         "signature": "7d265412d7f3f142768c3a25e7df9f266ddebd64015cb0eeb4295d20fd49c201",
         "affectsGlobalScope": false
       },
-      "../src/university/university.service.ts": {
-        "version": "db0f0a4e322edf8e1120f77f052e192950e0534246160852ffc2d3aaad47bd93",
-        "signature": "e6e8b0425393f5c27d342cd7e0e11441a43bf6f4bf168fce5a2b3964d5885ed0",
+      "../src/facility/facility.service.ts": {
+        "version": "db22785a509f6d1644655fb27ebe91676ee46677c3bc47e9d02f7fd13da9e84a",
+        "signature": "592c105db067b6164e77f5ea5d65c9f22c14a618ece4ac8ba43d19e1ed67c32a",
         "affectsGlobalScope": false
       },
-      "../src/university/commands/command.handler.ts": {
-        "version": "d924642479112881dbe0173d1b304a1d306e855c7bfbf59247b12119760252c5",
-        "signature": "8ba0c1cccf5132572700cd8f0b48534b6298542b5e0dacf4d698186afa092232",
+      "../src/facility/commands/command.handler.ts": {
+        "version": "4869da55e79fe1531b710858edf614e6439fbd6548ef1e09374986d1d288ddaa",
+        "signature": "65798f1c5de55494ccfb48b59d40381b4a8b24c9078f1dde1cfb0a7f99a4fd76",
         "affectsGlobalScope": false
       },
-      "../src/university/events/event.handler.ts": {
-        "version": "afab518418f1bf6f639107d664f0fbb8678e036d26460bc49016f1cdc26344a0",
-        "signature": "f9f1f0669b0a8e97cb2b68c4460ee96c273a2ea627d7bb33a69e2fd42b5087bc",
+      "../src/facility/events/event.handler.ts": {
+        "version": "d5542837d523ea2559dfd22ddc6b524479d09699cc7173b0c9ccadc819572005",
+        "signature": "e7d67e00da2eae534b70f1fa19e7eff6e96014626b0fab48ab3a92497ce21978",
         "affectsGlobalScope": false
       },
       "../src/kafka/event.decorator.ts": {
-        "version": "4dc7e7fd3057d2db3e1e42a9c75baf455a8bf27558a3e4929e86277128c3cbe2",
+        "version": "d6e7eb220f8dbcde9c4e583353f1782f395db375003745e7465f7405ba59fae4",
         "signature": "353a929c17803fb7816e39a93752005389a8313647f40c00b3de1f43c48bfa32",
         "affectsGlobalScope": false
       },
-      "../src/university/university.controller.ts": {
-        "version": "fd5a1f97b1032c68bd648ade01c1bd92062625bb73d3d551e7d8b0b4d1f9513b",
-        "signature": "32a215bc24e7ae8a7df2c8fe3796aeda5d2c5e8d1dfe15da495013cefb9c2aae",
+      "../src/facility/facility.controller.ts": {
+        "version": "778998736d9cd33a6bf5ef0709963ed0e3c110f5ef0709d60a57f3a3e7dd9a0f",
+        "signature": "644186c471bc178872b9eee1cd7390c84aa4e2673a10f22644251fc8db0f3148",
         "affectsGlobalScope": false
       },
       "../src/logging/logging.module.ts": {
@@ -2816,9 +2816,9 @@
         "signature": "cfa9c7078fdae553cc735dd415d13e16cc1c2d2083f99c3dea563b19d5dfa709",
         "affectsGlobalScope": false
       },
-      "../src/university/university.module.ts": {
-        "version": "7769c457023b06d15f4bc0597c3b40e003a3fc019262cfc2fd9f31e4bf4d4a02",
-        "signature": "584f06f9d9af2bf5f53a3523653f2c7ec0a7cf01bf2440a681dca61cc1c95cfb",
+      "../src/facility/facility.module.ts": {
+        "version": "fdfdec0d2d664c1cfa581a3f78db73dbef2e84e42f34da4140215636463cc9cd",
+        "signature": "4bfd12978d4e155a92e46bc0fdfef9272e14f03115a6fb9487f9eb77145a591e",
         "affectsGlobalScope": false
       },
       "../src/config/config.module.ts": {
@@ -2881,13 +2881,23 @@
         "signature": "0c1af51a2f56137ed7f3c99b363a82dc1e70b9d375004f5fdcb3d6bbeeba4ac3",
         "affectsGlobalScope": false
       },
+      "../src/auth/auth.controller.ts": {
+        "version": "ffb3e2d85036a826c736badb69527ae96872d4cc3bcbfe46c9c6075953411b7e",
+        "signature": "b2e421e5919721c1b8260a2104ffd0431473a2f935aa267e5de2f872834b351d",
+        "affectsGlobalScope": false
+      },
+      "../src/auth/auth.module.ts": {
+        "version": "99683479104f1bf1b20ba970f75f362d37f4108c391b6dd0e20cb55b94d60706",
+        "signature": "a28b5c0c372fb375910b3fe3c3ce4331509bc18ccef7cc39c9ee9d8daf8225d1",
+        "affectsGlobalScope": false
+      },
       "../src/app.module.ts": {
-        "version": "d64b498c33752fca111690c7d97937afc8969cadfa83d2931cab9fce42ffe13a",
+        "version": "d136280e384e4d88df478c501a6f8c7b3a27d145636885b021afd31551c0eba3",
         "signature": "c5d8d8d09bab9c1856515cc770847e363c0b18db26dc3e48f4c5c883c9cff7ff",
         "affectsGlobalScope": false
       },
       "../src/main.ts": {
-        "version": "96fe32bf3a6f645b91081ee98bab94631c48914b8472be80a174e1233d899954",
+        "version": "7548f4389c1bf6b166803b8fdc16063a24b4f2fdfc9aedb98f1693fe6d2addd1",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
         "affectsGlobalScope": false
       },
@@ -8480,10 +8490,21 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../src/auth/auth.middleware.ts",
+        "../src/auth/auth.module.ts",
         "../src/config/config.module.ts",
         "../src/config/config.service.ts",
-        "../src/kafka/kafka.module.ts",
-        "../src/university/university.module.ts"
+        "../src/facility/facility.module.ts",
+        "../src/kafka/kafka.module.ts"
+      ],
+      "../src/auth/auth.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/rxjs/index.d.ts",
+        "../src/config/config.interface.ts"
       ],
       "../src/auth/auth.decorator.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -8522,6 +8543,16 @@
         "../src/auth/auth.interface.ts",
         "../src/config/config.interface.ts"
       ],
+      "../src/auth/auth.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../src/auth/auth.controller.ts",
+        "../src/logging/logging.module.ts"
+      ],
       "../src/config/config.interface.ts": [
         "../node_modules/@types/graceful-fs/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
@@ -8546,6 +8577,136 @@
         "../node_modules/@types/node/util.d.ts",
         "../src/config/config.interface.ts"
       ],
+      "../src/facility/commands/command.handler.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/microservices/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../src/facility/commands/command.ts",
+        "../src/facility/commands/createUniversity.command.ts",
+        "../src/facility/facility.schema.ts",
+        "../src/facility/facility.service.ts"
+      ],
+      "../src/facility/commands/command.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/class-validator/types/index.d.ts"
+      ],
+      "../src/facility/commands/createUniversity.command.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/class-transformer/index.d.ts",
+        "../node_modules/class-validator/types/index.d.ts",
+        "../src/facility/commands/command.ts"
+      ],
+      "../src/facility/dto/createUniversity.dto.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/class-validator/types/index.d.ts"
+      ],
+      "../src/facility/events/event.handler.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/microservices/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../src/facility/events/event.ts",
+        "../src/facility/events/studentEnrolled.event.ts",
+        "../src/facility/facility.schema.ts",
+        "../src/facility/facility.service.ts"
+      ],
+      "../src/facility/events/event.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/class-validator/types/index.d.ts"
+      ],
+      "../src/facility/events/studentEnrolled.event.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/class-validator/types/index.d.ts",
+        "../src/facility/events/event.ts"
+      ],
+      "../src/facility/facility.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/microservices/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../src/auth/auth.decorator.ts",
+        "../src/auth/auth.guard.ts",
+        "../src/config/config.interface.ts",
+        "../src/facility/commands/command.handler.ts",
+        "../src/facility/commands/command.ts",
+        "../src/facility/dto/createUniversity.dto.ts",
+        "../src/facility/events/event.handler.ts",
+        "../src/facility/events/event.ts",
+        "../src/facility/facility.schema.ts",
+        "../src/facility/facility.service.ts",
+        "../src/kafka/command.decorator.ts",
+        "../src/kafka/event.decorator.ts",
+        "../src/kafka/kafka.exception.filter.ts",
+        "../src/kafka/kafkaTopic.decorator.ts",
+        "../src/pipe/mongoid.pipe.ts"
+      ],
+      "../src/facility/facility.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../src/facility/commands/command.handler.ts",
+        "../src/facility/events/event.handler.ts",
+        "../src/facility/facility.controller.ts",
+        "../src/facility/facility.schema.ts",
+        "../src/facility/facility.service.ts",
+        "../src/logging/logging.module.ts"
+      ],
+      "../src/facility/facility.schema.ts": [
+        "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/mongoose/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../src/facility/facility.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/mongoose/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../src/facility/dto/createUniversity.dto.ts",
+        "../src/facility/events/studentEnrolled.event.ts",
+        "../src/facility/facility.schema.ts"
+      ],
       "../src/kafka/command.decorator.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/microservices/index.d.ts",
@@ -8556,8 +8717,8 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/class-transformer/index.d.ts",
         "../node_modules/class-validator/types/index.d.ts",
-        "../src/university/commands/command.ts",
-        "../src/university/commands/createUniversity.command.ts"
+        "../src/facility/commands/command.ts",
+        "../src/facility/commands/createUniversity.command.ts"
       ],
       "../src/kafka/event.decorator.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -8569,8 +8730,8 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/class-transformer/index.d.ts",
         "../node_modules/class-validator/types/index.d.ts",
-        "../src/university/events/event.ts",
-        "../src/university/events/studentEnrolled.event.ts"
+        "../src/facility/events/event.ts",
+        "../src/facility/events/studentEnrolled.event.ts"
       ],
       "../src/kafka/kafka.exception.filter.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -8641,136 +8802,6 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/class-validator/types/index.d.ts"
-      ],
-      "../src/university/commands/command.handler.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../node_modules/@nestjs/microservices/index.d.ts",
-        "../node_modules/@types/graceful-fs/index.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../src/university/commands/command.ts",
-        "../src/university/commands/createUniversity.command.ts",
-        "../src/university/university.schema.ts",
-        "../src/university/university.service.ts"
-      ],
-      "../src/university/commands/command.ts": [
-        "../node_modules/@types/graceful-fs/index.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/class-validator/types/index.d.ts"
-      ],
-      "../src/university/commands/createUniversity.command.ts": [
-        "../node_modules/@types/graceful-fs/index.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/class-transformer/index.d.ts",
-        "../node_modules/class-validator/types/index.d.ts",
-        "../src/university/commands/command.ts"
-      ],
-      "../src/university/dto/createUniversity.dto.ts": [
-        "../node_modules/@types/graceful-fs/index.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/class-validator/types/index.d.ts"
-      ],
-      "../src/university/events/event.handler.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../node_modules/@nestjs/microservices/index.d.ts",
-        "../node_modules/@types/graceful-fs/index.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../src/university/events/event.ts",
-        "../src/university/events/studentEnrolled.event.ts",
-        "../src/university/university.schema.ts",
-        "../src/university/university.service.ts"
-      ],
-      "../src/university/events/event.ts": [
-        "../node_modules/@types/graceful-fs/index.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/class-validator/types/index.d.ts"
-      ],
-      "../src/university/events/studentEnrolled.event.ts": [
-        "../node_modules/@types/graceful-fs/index.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/class-validator/types/index.d.ts",
-        "../src/university/events/event.ts"
-      ],
-      "../src/university/university.controller.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../node_modules/@nestjs/microservices/index.d.ts",
-        "../node_modules/@types/graceful-fs/index.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../src/auth/auth.decorator.ts",
-        "../src/auth/auth.guard.ts",
-        "../src/config/config.interface.ts",
-        "../src/kafka/command.decorator.ts",
-        "../src/kafka/event.decorator.ts",
-        "../src/kafka/kafka.exception.filter.ts",
-        "../src/kafka/kafkaTopic.decorator.ts",
-        "../src/pipe/mongoid.pipe.ts",
-        "../src/university/commands/command.handler.ts",
-        "../src/university/commands/command.ts",
-        "../src/university/dto/createUniversity.dto.ts",
-        "../src/university/events/event.handler.ts",
-        "../src/university/events/event.ts",
-        "../src/university/university.schema.ts",
-        "../src/university/university.service.ts"
-      ],
-      "../src/university/university.module.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../node_modules/@nestjs/mongoose/index.d.ts",
-        "../node_modules/@types/graceful-fs/index.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../src/logging/logging.module.ts",
-        "../src/university/commands/command.handler.ts",
-        "../src/university/events/event.handler.ts",
-        "../src/university/university.controller.ts",
-        "../src/university/university.schema.ts",
-        "../src/university/university.service.ts"
-      ],
-      "../src/university/university.schema.ts": [
-        "../node_modules/@nestjs/mongoose/index.d.ts",
-        "../node_modules/@types/graceful-fs/index.d.ts",
-        "../node_modules/@types/mongoose/index.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts",
-        "../node_modules/@types/node/util.d.ts"
-      ],
-      "../src/university/university.service.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../node_modules/@nestjs/mongoose/index.d.ts",
-        "../node_modules/@types/graceful-fs/index.d.ts",
-        "../node_modules/@types/mongoose/index.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../src/university/dto/createUniversity.dto.ts",
-        "../src/university/events/studentEnrolled.event.ts",
-        "../src/university/university.schema.ts"
       ]
     },
     "exportedModulesMap": {
@@ -14135,6 +14166,10 @@
       "../src/app.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts"
       ],
+      "../src/auth/auth.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/config/config.interface.ts"
+      ],
       "../src/auth/auth.decorator.ts": [
         "../node_modules/@nestjs/common/index.d.ts"
       ],
@@ -14158,6 +14193,42 @@
       "../src/config/config.service.ts": [
         "../src/config/config.interface.ts"
       ],
+      "../src/facility/commands/command.handler.ts": [
+        "../src/facility/commands/command.ts",
+        "../src/facility/facility.schema.ts",
+        "../src/facility/facility.service.ts"
+      ],
+      "../src/facility/commands/createUniversity.command.ts": [
+        "../src/facility/commands/command.ts"
+      ],
+      "../src/facility/events/event.handler.ts": [
+        "../src/facility/events/event.ts",
+        "../src/facility/facility.schema.ts",
+        "../src/facility/facility.service.ts"
+      ],
+      "../src/facility/events/studentEnrolled.event.ts": [
+        "../src/facility/events/event.ts"
+      ],
+      "../src/facility/facility.controller.ts": [
+        "../node_modules/@nestjs/microservices/index.d.ts",
+        "../src/config/config.interface.ts",
+        "../src/facility/commands/command.handler.ts",
+        "../src/facility/commands/command.ts",
+        "../src/facility/dto/createUniversity.dto.ts",
+        "../src/facility/events/event.handler.ts",
+        "../src/facility/events/event.ts",
+        "../src/facility/facility.schema.ts",
+        "../src/facility/facility.service.ts"
+      ],
+      "../src/facility/facility.schema.ts": [
+        "../node_modules/@types/mongoose/index.d.ts"
+      ],
+      "../src/facility/facility.service.ts": [
+        "../node_modules/@types/mongoose/index.d.ts",
+        "../src/facility/dto/createUniversity.dto.ts",
+        "../src/facility/events/studentEnrolled.event.ts",
+        "../src/facility/facility.schema.ts"
+      ],
       "../src/kafka/kafka.exception.filter.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/microservices/index.d.ts",
@@ -14174,42 +14245,6 @@
       ],
       "../src/pipe/mongoid.pipe.ts": [
         "../node_modules/@nestjs/common/index.d.ts"
-      ],
-      "../src/university/commands/command.handler.ts": [
-        "../src/university/commands/command.ts",
-        "../src/university/university.schema.ts",
-        "../src/university/university.service.ts"
-      ],
-      "../src/university/commands/createUniversity.command.ts": [
-        "../src/university/commands/command.ts"
-      ],
-      "../src/university/events/event.handler.ts": [
-        "../src/university/events/event.ts",
-        "../src/university/university.schema.ts",
-        "../src/university/university.service.ts"
-      ],
-      "../src/university/events/studentEnrolled.event.ts": [
-        "../src/university/events/event.ts"
-      ],
-      "../src/university/university.controller.ts": [
-        "../node_modules/@nestjs/microservices/index.d.ts",
-        "../src/config/config.interface.ts",
-        "../src/university/commands/command.handler.ts",
-        "../src/university/commands/command.ts",
-        "../src/university/dto/createUniversity.dto.ts",
-        "../src/university/events/event.handler.ts",
-        "../src/university/events/event.ts",
-        "../src/university/university.schema.ts",
-        "../src/university/university.service.ts"
-      ],
-      "../src/university/university.schema.ts": [
-        "../node_modules/@types/mongoose/index.d.ts"
-      ],
-      "../src/university/university.service.ts": [
-        "../node_modules/@types/mongoose/index.d.ts",
-        "../src/university/dto/createUniversity.dto.ts",
-        "../src/university/events/studentEnrolled.event.ts",
-        "../src/university/university.schema.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
@@ -14805,13 +14840,26 @@
       "../node_modules/typescript/lib/lib.scripthost.d.ts",
       "../node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
       "../src/app.module.ts",
+      "../src/auth/auth.controller.ts",
       "../src/auth/auth.decorator.ts",
       "../src/auth/auth.guard.ts",
       "../src/auth/auth.interface.ts",
       "../src/auth/auth.middleware.ts",
+      "../src/auth/auth.module.ts",
       "../src/config/config.interface.ts",
       "../src/config/config.module.ts",
       "../src/config/config.service.ts",
+      "../src/facility/commands/command.handler.ts",
+      "../src/facility/commands/command.ts",
+      "../src/facility/commands/createUniversity.command.ts",
+      "../src/facility/dto/createUniversity.dto.ts",
+      "../src/facility/events/event.handler.ts",
+      "../src/facility/events/event.ts",
+      "../src/facility/events/studentEnrolled.event.ts",
+      "../src/facility/facility.controller.ts",
+      "../src/facility/facility.module.ts",
+      "../src/facility/facility.schema.ts",
+      "../src/facility/facility.service.ts",
       "../src/kafka/command.decorator.ts",
       "../src/kafka/event.decorator.ts",
       "../src/kafka/kafka.exception.filter.ts",
@@ -14820,18 +14868,7 @@
       "../src/logging/logging.module.ts",
       "../src/logging/logging.service.ts",
       "../src/main.ts",
-      "../src/pipe/mongoid.pipe.ts",
-      "../src/university/commands/command.handler.ts",
-      "../src/university/commands/command.ts",
-      "../src/university/commands/createUniversity.command.ts",
-      "../src/university/dto/createUniversity.dto.ts",
-      "../src/university/events/event.handler.ts",
-      "../src/university/events/event.ts",
-      "../src/university/events/studentEnrolled.event.ts",
-      "../src/university/university.controller.ts",
-      "../src/university/university.module.ts",
-      "../src/university/university.schema.ts",
-      "../src/university/university.service.ts"
+      "../src/pipe/mongoid.pipe.ts"
     ]
   },
   "version": "3.9.5"

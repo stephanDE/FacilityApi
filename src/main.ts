@@ -5,8 +5,12 @@ import { AppModule } from './app.module';
 import { ConfigService } from './config/config.service';
 import { LoggingService } from './logging/logging.service';
 
+process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
+
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule, { logger: true });
+  const app = await NestFactory.create(AppModule, {
+    logger: true,
+  });
 
   const configService: ConfigService = app.get(ConfigService);
   const logger: LoggingService = app.get(LoggingService);

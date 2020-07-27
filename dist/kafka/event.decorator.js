@@ -5,7 +5,7 @@ const common_1 = require("@nestjs/common");
 const microservices_1 = require("@nestjs/microservices");
 const class_transformer_1 = require("class-transformer");
 const class_validator_1 = require("class-validator");
-const studentEnrolled_event_1 = require("../university/events/studentEnrolled.event");
+const studentEnrolled_event_1 = require("../facility/events/studentEnrolled.event");
 exports.Evt = common_1.createParamDecorator(async (data, ctx) => {
     const ctxData = ctx.switchToRpc().getData();
     const value = ctxData.value;

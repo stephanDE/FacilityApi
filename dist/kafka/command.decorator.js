@@ -5,7 +5,7 @@ const common_1 = require("@nestjs/common");
 const class_transformer_1 = require("class-transformer");
 const class_validator_1 = require("class-validator");
 const microservices_1 = require("@nestjs/microservices");
-const createUniversity_command_1 = require("../university/commands/createUniversity.command");
+const createUniversity_command_1 = require("../facility/commands/createUniversity.command");
 exports.Cmd = common_1.createParamDecorator(async (data, ctx) => {
     const ctxData = ctx.switchToRpc().getData();
     const value = ctxData.value;

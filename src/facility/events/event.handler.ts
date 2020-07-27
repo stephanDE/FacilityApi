@@ -2,15 +2,15 @@ import { Injectable } from '@nestjs/common';
 import { RpcException } from '@nestjs/microservices';
 import { StudentEnrolledEvent } from './studentEnrolled.event';
 
-import { UniversityService } from '../university.service';
-import { University } from '../university.schema';
-import { Event } from '../events/event';
+import { FacilityService } from '../facility.service';
+import { Facility } from '../facility.schema';
+import { Event } from './event';
 
 @Injectable()
 export class EventHandler {
-  constructor(private universityService: UniversityService) {}
+  constructor(private universityService: FacilityService) {}
 
-  async handleEvent(event: Event): Promise<University> {
+  async handleEvent(event: Event): Promise<Facility> {
     switch (event.action) {
       case 'StudentEnrolled': {
         return this.handleStudentEnrolledEvent(event as StudentEnrolledEvent);
@@ -23,7 +23,7 @@ export class EventHandler {
 
   private async handleStudentEnrolledEvent(
     event: StudentEnrolledEvent,
-  ): Promise<University> {
+  ): Promise<Facility> {
     return this.universityService.enroll(event.data);
   }
 }

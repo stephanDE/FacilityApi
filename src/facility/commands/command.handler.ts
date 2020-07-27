@@ -1,16 +1,16 @@
 import { Injectable } from '@nestjs/common';
 import { RpcException } from '@nestjs/microservices';
 
-import { UniversityService } from '../university.service';
-import { University } from '../university.schema';
+import { FacilityService } from '../facility.service';
+import { Facility } from '../facility.schema';
 import { Command } from './command';
 import { CreateUniversityCommand } from './createUniversity.command';
 
 @Injectable()
 export class CommandHandler {
-  constructor(private universityService: UniversityService) {}
+  constructor(private universityService: FacilityService) {}
 
-  async handler(command: Command): Promise<University> {
+  async handler(command: Command): Promise<Facility> {
     switch (command.action) {
       case 'CreateUniversity':
         return this.handleCreateUniversityCommand(

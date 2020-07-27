@@ -1,9 +1,9 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { UniversityService } from './university.service';
+import { FacilityService } from './facility.service';
 import { getModelToken } from '@nestjs/mongoose';
 
 describe('UniversityService', () => {
-  let service: UniversityService;
+  let service: FacilityService;
 
   function mockUniversityModel(dto: any) {
     this.data = dto;
@@ -16,15 +16,15 @@ describe('UniversityService', () => {
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       providers: [
-        UniversityService,
+        FacilityService,
         {
-          provide: getModelToken('Universities'),
+          provide: getModelToken('Facilities'),
           useValue: mockUniversityModel,
         },
       ],
     }).compile();
 
-    service = module.get<UniversityService>(UniversityService);
+    service = module.get<FacilityService>(FacilityService);
   });
 
   it('should be defined', () => {

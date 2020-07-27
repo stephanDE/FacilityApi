@@ -10,14 +10,13 @@ exports.AppModule = void 0;
 const common_1 = require("@nestjs/common");
 const jwt_1 = require("@nestjs/jwt");
 const mongoose_1 = require("@nestjs/mongoose");
-const university_module_1 = require("./university/university.module");
+const facility_module_1 = require("./facility/facility.module");
 const config_module_1 = require("./config/config.module");
 const config_service_1 = require("./config/config.service");
-const auth_middleware_1 = require("./auth/auth.middleware");
 const kafka_module_1 = require("./kafka/kafka.module");
+const auth_module_1 = require("./auth/auth.module");
 let AppModule = class AppModule {
     configure(consumer) {
-        consumer.apply(auth_middleware_1.AuthMiddleware).forRoutes('*');
     }
 };
 AppModule = __decorate([
@@ -38,7 +37,8 @@ AppModule = __decorate([
             }),
             kafka_module_1.KafkaModule.forRootAsync(),
             config_module_1.ConfigModule.forRoot(),
-            university_module_1.UniversityModule,
+            facility_module_1.FacilityModule,
+            auth_module_1.AuthModule,
         ],
         controllers: [],
         providers: [],

@@ -8,7 +8,7 @@ class ConfigService {
         auth.issuer =
             process.env.AUTH_ISSUER || 'https://94.130.56.60.xip.io/auth/realms/edu';
         auth.realm = process.env.AUTH_REALM || 'edu';
-        auth.resource = process.env.AUTH_RESOURCE || 'university-service';
+        auth.resource = process.env.AUTH_RESOURCE || 'facility-service';
         auth.publicKey =
             process.env.AUTH_PUBLIC_KEY ||
                 '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjVphni5jrwLiOXhzSSse7cprTmxSwL/J/FepX1MpkROiVVIEbkHg8v+oeuNGGVG6BAP131BQzvPrpBvtLIfvARzzfn83/tMF1k2hUlDP6PCr2mohg02grSaQJ+nl1gtl5p1P84mz6yzM8dAGGWLJ29F6ryx0I1GDQ7w9WquarWbdkUr1pePTz3NDqiUgqh7RtEQpvsrhA6PyeB76QZt/oq/xTTPL7cgKwBiEQckWdRjydXKcN880qbf5+q69Wz5LN5vKMfRv3OloJ3dai7m+Qq2BiZQFq1uRw9XCaLJuxuY2M4o8rL8wnMmDtnOAd07g/lbS713zRhVWY+/UWgbxJwIDAQAB\n-----END PUBLIC KEY-----';
@@ -23,7 +23,7 @@ class ConfigService {
             process.env.MONGO_URI ||
                 `mongodb://${credentials}${mongoHost}:${mongoPort}/${database}`;
         const kafka = {};
-        kafka.clientId = 'demo';
+        kafka.clientId = 'facility';
         kafka.prefix = process.env.KAFKA_PREFIX || 'local';
         const kafkaHost = process.env.KAFKA_HOST || 'localhost';
         const kafkaPort = process.env.KAFKA_PORT || '9093';
