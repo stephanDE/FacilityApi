@@ -1,1 +1,0 @@
-{"version":3,"file":"mongoid.pipe.js","sourceRoot":"","sources":["../../src/pipe/mongoid.pipe.ts"],"names":[],"mappings":";;;AAAA,2CAAoE;AACpE,qDAA4C;AAE5C,MAAa,SAAS;IACpB,KAAK,CAAC,SAAS,CAAC,KAAa;QAC3B,IAAI,CAAC,2BAAS,CAAC,KAAK,CAAC,EAAE;YACrB,MAAM,IAAI,4BAAmB,CAAC,qBAAqB,CAAC,CAAC;SACtD;QACD,OAAO,KAAK,CAAC;IACf,CAAC;CACF;AAPD,8BAOC"}
