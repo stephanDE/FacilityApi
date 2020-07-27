@@ -5,7 +5,6 @@ const microservices_1 = require("@nestjs/microservices");
 const app_module_1 = require("./app.module");
 const config_service_1 = require("./config/config.service");
 const logging_service_1 = require("./logging/logging.service");
-process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
 async function bootstrap() {
     const app = await core_1.NestFactory.create(app_module_1.AppModule, {
         logger: true,

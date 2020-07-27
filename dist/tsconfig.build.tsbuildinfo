@@ -2882,8 +2882,8 @@
         "affectsGlobalScope": false
       },
       "../src/auth/auth.controller.ts": {
-        "version": "ffb3e2d85036a826c736badb69527ae96872d4cc3bcbfe46c9c6075953411b7e",
-        "signature": "b2e421e5919721c1b8260a2104ffd0431473a2f935aa267e5de2f872834b351d",
+        "version": "661e8d35cabcb06662bf8b52de2dfd42ea3a280cf61d4421f3276c99e376c2cb",
+        "signature": "b8b7ea2dda17ad1afad54b05c5be78d594b788292566e4e6fb324b7623b65e41",
         "affectsGlobalScope": false
       },
       "../src/auth/auth.module.ts": {
@@ -2897,7 +2897,7 @@
         "affectsGlobalScope": false
       },
       "../src/main.ts": {
-        "version": "7548f4389c1bf6b166803b8fdc16063a24b4f2fdfc9aedb98f1693fe6d2addd1",
+        "version": "f124cb6fa5011c4f048f31e69687f70b5059cc304e5e9fef5376997045496904",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
         "affectsGlobalScope": false
       },
@@ -8503,7 +8503,6 @@
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts",
-        "../node_modules/rxjs/index.d.ts",
         "../src/config/config.interface.ts"
       ],
       "../src/auth/auth.decorator.ts": [

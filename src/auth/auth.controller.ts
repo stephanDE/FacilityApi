@@ -8,7 +8,6 @@ import {
 } from '@nestjs/common';
 
 import { Config } from '../config/config.interface';
-import { of } from 'rxjs';
 
 @Controller('auth')
 export class AuthController {
@@ -20,7 +19,7 @@ export class AuthController {
   // ---------------- REST --------------------
 
   @Post('')
-  async createOne(@Body() requestBody: any): Promise<any> {
+  async authUser(@Body() requestBody: any): Promise<any> {
     const { username, password } = requestBody;
     if (!username) {
       throw new BadRequestException('Username is required');

@@ -19,7 +19,7 @@ let AuthController = class AuthController {
         this.config = config;
         this.httpService = httpService;
     }
-    async createOne(requestBody) {
+    async authUser(requestBody) {
         const { username, password } = requestBody;
         if (!username) {
             throw new common_1.BadRequestException('Username is required');
@@ -27,7 +27,7 @@ let AuthController = class AuthController {
         if (!password) {
             throw new common_1.BadRequestException('Password is required');
         }
-        return this.httpService.post('https://94.130.56.60.xip.io/auth/realms/edu/protocol/openid-connect/token', {
+        return this.httpService.post('https://auth.keycloak/auth/realms/edu/protocol/openid-connect/token', {
             grant_type: 'password',
             client_id: 'university-service',
             client_secret: 'b2d96771-376e-4bb6-9003-fdeea55e542c',
@@ -47,7 +47,7 @@ __decorate([
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
-], AuthController.prototype, "createOne", null);
+], AuthController.prototype, "authUser", null);
 AuthController = __decorate([
     common_1.Controller('auth'),
     __param(0, common_1.Inject('CONFIG')),
