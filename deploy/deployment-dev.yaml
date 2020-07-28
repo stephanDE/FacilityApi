@@ -59,7 +59,7 @@ spec:
           - backend:
               serviceName: facility-api-service
               servicePort: 3000
-            path: /api/facility
+            path: /api
   tls:
     - hosts:
         - facility-api.dev.116.203.237.159.xip.io
