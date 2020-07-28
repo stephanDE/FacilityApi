@@ -5,6 +5,7 @@ import {
   Body,
   HttpService,
   BadRequestException,
+  Get,
 } from '@nestjs/common';
 
 import { Config } from '../config/config.interface';
@@ -44,5 +45,10 @@ export class AuthController {
         },
       },
     );
+  }
+
+  @Get('')
+  async get(): Promise<any> {
+    return 'geht geht aber';
   }
 }
