@@ -48,7 +48,7 @@ spec:
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: facility-api-ingress
+  name: facility-api
   namespace: prod
 spec:
   rules:
@@ -58,7 +58,7 @@ spec:
           - backend:
               serviceName: facility-api-service
               servicePort: 3000
-            path: /api/facility
+            path: /api
   tls:
     - hosts:
         - facility-api.116.203.237.159.xip.io
