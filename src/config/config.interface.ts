@@ -12,6 +12,8 @@ export interface AuthConfig {
   publicKey?: string;
   realm?: string;
   resource?: string;
+  host?: string;
+  clientSecret?: string;
 }
 
 export interface MongoConfig {

@@ -6,9 +6,14 @@ import {
   HttpService,
   BadRequestException,
   Get,
+  UnauthorizedException,
 } from '@nestjs/common';
 
 import { Config } from '../config/config.interface';
+import { of } from 'rxjs';
+import { map } from 'rxjs/operators';
+
+import { stringify } from 'querystring';
 
 @Controller('auth')
 export class AuthController {
@@ -29,22 +34,35 @@ export class AuthController {
     if (!password) {
       throw new BadRequestException('Password is required');
     }
-    return this.httpService.post(
-      'http://keycloak.auth/auth/realms/edu/protocol/openid-connect/token',
-      {
-        grant_type: 'password',
-        client_id: 'university-service',
-        client_secret: 'b2d96771-376e-4bb6-9003-fdeea55e542c',
-        username,
-        password,
-        scope: 'roles',
-      },
-      {
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-      },
-    );
+
+    try {
+      const result = await this.httpService
+        .post(
+          `http://${this.config.auth.host}:8080/auth/realms/${this.config.auth.realm}/protocol/openid-connect/token`,
+          stringify({
+            grant_type: 'password',
+            client_id: this.config.auth.resource,
+            client_secret: this.config.auth.clientSecret,
+            username,
+            password,
+            scope: 'roles',
+          }),
+          {
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded',
+            },
+          },
+        )
+        .pipe(
+          map(res => {
+            return res.data;
+          }),
+        )
+        .toPromise();
+      return of(result);
+    } catch (e) {
+      throw new UnauthorizedException('unauthorized');
+    }
   }
 
   @Get('')
