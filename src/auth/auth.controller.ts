@@ -30,7 +30,7 @@ export class AuthController {
       throw new BadRequestException('Password is required');
     }
     return this.httpService.post(
-      'https://auth.keycloak/auth/realms/edu/protocol/openid-connect/token',
+      'auth.keycloak/auth/realms/edu/protocol/openid-connect/token',
       {
         grant_type: 'password',
         client_id: 'university-service',
