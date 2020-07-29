@@ -5,7 +5,9 @@ import { FloorEnrolledEvent } from './floorEnrolled.event';
 import { FacilityService } from '../facility.service';
 import { Facility } from '../facility.schema';
 import { Event } from './event';
-import { FloorService } from 'src/floor/floor.service';
+import { FloorService } from '../../floor/floor.service';
+import { FlatEnrolledEvent } from './flatEnrolled.event';
+import { Floor } from '../../floor/floor.schema';
 
 @Injectable()
 export class EventHandler {
@@ -14,10 +16,14 @@ export class EventHandler {
     private floorService: FloorService,
   ) {}
 
-  async handleEvent(event: Event): Promise<Facility> {
+  async handleEvent(event: Event): Promise<any> {
     switch (event.action) {
       case 'FloorEnrolled': {
         return this.handleFloorEnrolledEvent(event as FloorEnrolledEvent);
+      }
+
+      case 'FlatEnrolled': {
+        return this.handleFlatEnrolledEvent(event as FlatEnrolledEvent);
       }
 
       default:
@@ -29,5 +35,11 @@ export class EventHandler {
     event: FloorEnrolledEvent,
   ): Promise<Facility> {
     return this.facilityService.enroll(event);
+  }
+
+  private async handleFlatEnrolledEvent(
+    event: FlatEnrolledEvent,
+  ): Promise<Floor> {
+    return this.floorService.enroll(event);
   }
 }

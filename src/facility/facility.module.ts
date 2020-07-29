@@ -7,7 +7,8 @@ import { LoggingModule } from '../logging/logging.module';
 import { FacilityService } from './facility.service';
 import { CommandHandler } from './commands/command.handler';
 import { EventHandler } from './events/event.handler';
-import { FloorModule } from 'src/floor/floor.module';
+import { FloorModule } from '../floor/floor.module';
+import { FlatModule } from '../flat/flat.module';
 
 @Module({
   imports: [

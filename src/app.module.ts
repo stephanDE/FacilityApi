@@ -9,6 +9,7 @@ import { AuthMiddleware } from './auth/auth.middleware';
 import { KafkaModule } from './kafka/kafka.module';
 import { AuthModule } from './auth/auth.module';
 import { FloorModule } from './floor/floor.module';
+import { FlatModule } from './flat/flat.module';
 
 @Module({
   imports: [
@@ -29,6 +30,7 @@ import { FloorModule } from './floor/floor.module';
     ConfigModule.forRoot(),
     FacilityModule,
     FloorModule,
+    FlatModule,
     AuthModule,
   ],
   controllers: [],
