@@ -19,7 +19,9 @@ import { FlatModule } from '../flat/flat.module';
       },
     ]),
     LoggingModule,
+    //todo
     FloorModule,
+    FlatModule,
   ],
   controllers: [FacilityController],
   providers: [FacilityService, CommandHandler, EventHandler],

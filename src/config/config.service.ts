@@ -35,7 +35,7 @@ export class ConfigService {
     const credentials = user && password ? `${user}:${password}@` : '';
     const mongoHost = process.env.MONGO_HOST || 'localhost';
     const mongoPort = process.env.MONGO_PORT || '27017';
-    const database = process.env.MONGO_DATABASE || '';
+    const database = process.env.MONGO_DATABASE || 'facility';
 
     mongo.uri =
       process.env.MONGO_URI ||

@@ -19,5 +19,6 @@ import { CommandHandler } from './commands/command.handler';
   ],
   controllers: [FlatController],
   providers: [FlatService, CommandHandler],
+  exports: [FlatService],
 })
 export class FlatModule {}
