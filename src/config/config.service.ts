@@ -22,7 +22,7 @@ export class ConfigService {
 
     auth.host = process.env.AUTH_HOST || 'localhost';
     auth.clientSecret =
-      process.env.AUTH_CLIENT_SECRET || 'b2d96771-376e-4bb6-9003-fdeea55e542c';
+      process.env.AUTH_CLIENT_SECRET || '3a4008d7-b221-438e-a115-9d3d758362fc';
 
     auth.resource = process.env.AUTH_RESOURCE || 'facility-service';
     auth.publicKey =

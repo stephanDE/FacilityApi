@@ -25,20 +25,20 @@ import { Config } from '../config/config.interface';
 import { CommandHandler } from './commands/command.handler';
 import { EventHandler } from './events/event.handler';
 import { Evt } from '../kafka/event.decorator';
-import { Facility } from './facility.schema';
-import { FacilityService } from './facility.service';
-import { CreateFacilityDto } from './dto/createFacility.dto';
+import { Floor } from './floor.schema';
+import { FloorService } from './floor.service';
+import { CreateFloorDto } from './dto/createFloor.dto';
 
-@Controller('facility')
+@Controller('floor')
 @UseGuards(RoleGuard)
 @UseFilters(ExceptionFilter)
-export class FacilityController {
+export class FloorController {
   constructor(
     @Inject('KAFKA_SERVICE') private kafkaClient: ClientKafka,
     @Inject('CONFIG') private config: Config,
     private commandHandler: CommandHandler,
     private eventHandler: EventHandler,
-    private facilityService: FacilityService,
+    private floorService: FloorService,
   ) {}
 
   // ---------------- REST --------------------
@@ -46,46 +46,48 @@ export class FacilityController {
   @Post('')
   @Roles('Create')
   @UsePipes(ValidationPipe)
-  async createOne(@Body() dto: CreateFacilityDto): Promise<Facility> {
-    const facility: Facility = await this.facilityService.createOne(dto);
+  async createOne(@Body() dto: CreateFloorDto): Promise<Floor> {
+    const floor: Floor = await this.floorService.createOne(dto);
 
     const event = {
       id: uuid(),
       type: 'event',
-      action: 'FacilityCreated',
+      action: 'FloorEnrolled',
       timestamp: Date.now(),
-      data: facility,
+      data: floor,
     };
+
+    console.log('event wird rausgeballert');
 
     this.kafkaClient.emit(`${this.config.kafka.prefix}-facility-event`, event);
 
-    return facility;
+    return floor;
   }
 
   @Roles('Read')
   @Get('')
-  async getAll(): Promise<Facility[]> {
-    return this.facilityService.findAll();
+  async getAll(): Promise<Floor[]> {
+    return this.floorService.findAll();
   }
 
   @Get('/:id')
   async getOne(@Param('id', new MongoPipe()) id: string) {
-    return this.facilityService.findOne(id);
+    return this.floorService.findOne(id);
   }
 
   // ---------------- CRQS --------------------
 
-  @KafkaTopic(`facility-command`) async onCommand(
+  @KafkaTopic(`floor-command`) async onCommand(
     @Cmd() command: Command,
   ): Promise<void> {
-    const facility: Facility = await this.commandHandler.handler(command);
+    const floor: Floor = await this.commandHandler.handler(command);
 
     const event = {
       id: uuid(),
       type: 'event',
-      action: 'FacilityCreated',
+      action: 'FloorEnrolled',
       timestamp: Date.now(),
-      data: facility,
+      data: floor,
     };
 
     this.kafkaClient.emit(`${this.config.kafka.prefix}-facility-event`, event);
@@ -93,10 +95,10 @@ export class FacilityController {
     return;
   }
 
-  @KafkaTopic('facility-event') async onStudentEvent(
-    @Evt() event: Event,
-  ): Promise<void> {
+  /*
+  @KafkaTopic(`facility-event`)
+  async onFacilityEvent(@Evt() event: Event): Promise<void> {
     await this.eventHandler.handleEvent(event);
     return;
-  }
+  }*/
 }

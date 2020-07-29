@@ -3,7 +3,7 @@ import { RpcException } from '@nestjs/microservices';
 import { plainToClass } from 'class-transformer';
 import { validate } from 'class-validator';
 
-import { StudentEnrolledEvent } from '../facility/events/studentEnrolled.event';
+import { FloorEnrolledEvent } from '../facility/events/floorEnrolled.event';
 import { Event } from '../facility/events/event';
 
 export const Evt = createParamDecorator(
@@ -25,8 +25,8 @@ export const Evt = createParamDecorator(
     let event: Event;
 
     switch (value.action) {
-      case 'StudentEnrolled':
-        event = plainToClass(StudentEnrolledEvent, value);
+      case 'FloorEnrolled':
+        event = plainToClass(FloorEnrolledEvent, value);
         break;
       default:
         throw new RpcException(`Unknown event action: ${value.action}`);

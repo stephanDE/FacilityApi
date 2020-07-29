@@ -3,17 +3,21 @@ import { Type } from 'class-transformer';
 
 import { Command } from './command';
 
-class Facility {
+class Floor {
   @IsNotEmpty()
   @IsString()
-  readonly address;
+  readonly floorName;
 
-  readonly floors: string[];
+  @IsNotEmpty()
+  @IsString()
+  readonly facilityId;
+
+  readonly flats: string[];
 }
 
-export class CreateFacilityCommand extends Command {
+export class CreateFloorCommand extends Command {
   @IsNotEmpty()
   @ValidateNested()
-  @Type(() => Facility)
-  readonly data: Facility;
+  @Type(() => Floor)
+  readonly data: Floor;
 }

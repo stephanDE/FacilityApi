@@ -8,6 +8,7 @@ import { ConfigService } from './config/config.service';
 import { AuthMiddleware } from './auth/auth.middleware';
 import { KafkaModule } from './kafka/kafka.module';
 import { AuthModule } from './auth/auth.module';
+import { FloorModule } from './floor/floor.module';
 
 @Module({
   imports: [
@@ -27,6 +28,7 @@ import { AuthModule } from './auth/auth.module';
     KafkaModule.forRootAsync(),
     ConfigModule.forRoot(),
     FacilityModule,
+    FloorModule,
     AuthModule,
   ],
   controllers: [],
@@ -34,6 +36,6 @@ import { AuthModule } from './auth/auth.module';
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
-    consumer.apply(AuthMiddleware).forRoutes('/facility');
+    //consumer.apply(AuthMiddleware).forRoutes('/facility');
   }
 }

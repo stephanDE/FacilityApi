@@ -4,4 +4,6 @@ export class CreateFacilityDto {
   @IsNotEmpty()
   @IsString()
   readonly address: string;
+
+  readonly floors: any[];
 }

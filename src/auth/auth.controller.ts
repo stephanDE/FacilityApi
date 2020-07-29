@@ -61,6 +61,7 @@ export class AuthController {
         .toPromise();
       return of(result);
     } catch (e) {
+      console.log(e);
       throw new UnauthorizedException('unauthorized');
     }
   }

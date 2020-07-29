@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { RpcException } from '@nestjs/microservices';
-import { StudentEnrolledEvent } from './studentEnrolled.event';
+import { FloorEnrolledEvent } from './floorEnrolled.event';
 
 import { FacilityService } from '../facility.service';
 import { Facility } from '../facility.schema';
@@ -11,9 +11,11 @@ export class EventHandler {
   constructor(private facilityService: FacilityService) {}
 
   async handleEvent(event: Event): Promise<Facility> {
+    console.log('yeahhh');
     switch (event.action) {
-      case 'StudentEnrolled': {
-        return this.handleStudentEnrolledEvent(event as StudentEnrolledEvent);
+      case 'FloorEnrolled': {
+        console.log('huhu');
+        return this.handleFloorEnrolledEvent(event as FloorEnrolledEvent);
       }
 
       default:
@@ -21,9 +23,9 @@ export class EventHandler {
     }
   }
 
-  private async handleStudentEnrolledEvent(
-    event: StudentEnrolledEvent,
+  private async handleFloorEnrolledEvent(
+    event: FloorEnrolledEvent,
   ): Promise<Facility> {
-    return this.facilityService.enroll(event.data);
+    return this.facilityService.enroll(event);
   }
 }
