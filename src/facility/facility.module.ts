@@ -7,6 +7,7 @@ import { LoggingModule } from '../logging/logging.module';
 import { FacilityService } from './facility.service';
 import { CommandHandler } from './commands/command.handler';
 import { EventHandler } from './events/event.handler';
+import { FloorModule } from 'src/floor/floor.module';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { EventHandler } from './events/event.handler';
       },
     ]),
     LoggingModule,
+    FloorModule,
   ],
   controllers: [FacilityController],
   providers: [FacilityService, CommandHandler, EventHandler],

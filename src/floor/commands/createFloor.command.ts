@@ -1,7 +1,6 @@
 import { IsNotEmpty, ValidateNested, IsString } from 'class-validator';
 import { Type } from 'class-transformer';
-
-import { Command } from './command';
+import { Command } from 'src/facility/commands/command';
 
 class Floor {
   @IsNotEmpty()

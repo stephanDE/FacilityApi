@@ -1,5 +1,5 @@
 import { Event } from './event';
 
-export class FloorEnrolledEvent extends Event {
+export class FlatEnrolledEvent extends Event {
   data: any;
 }

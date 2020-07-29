@@ -3,8 +3,8 @@ import { RpcException } from '@nestjs/microservices';
 
 import { FloorService } from '../floor.service';
 import { Floor } from '../floor.schema';
-import { Command } from './command';
 import { CreateFloorCommand } from './createFloor.command';
+import { Command } from 'src/facility/commands/command';
 
 @Injectable()
 export class CommandHandler {

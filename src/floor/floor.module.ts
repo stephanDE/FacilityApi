@@ -6,7 +6,6 @@ import { FloorSchema } from './floor.schema';
 import { LoggingModule } from '../logging/logging.module';
 import { FloorService } from './floor.service';
 import { CommandHandler } from './commands/command.handler';
-import { EventHandler } from './events/event.handler';
 
 @Module({
   imports: [
@@ -19,6 +18,7 @@ import { EventHandler } from './events/event.handler';
     LoggingModule,
   ],
   controllers: [FloorController],
-  providers: [FloorService, CommandHandler, EventHandler],
+  providers: [FloorService, CommandHandler],
+  exports: [FloorService],
 })
 export class FloorModule {}

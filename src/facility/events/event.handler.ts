@@ -5,16 +5,18 @@ import { FloorEnrolledEvent } from './floorEnrolled.event';
 import { FacilityService } from '../facility.service';
 import { Facility } from '../facility.schema';
 import { Event } from './event';
+import { FloorService } from 'src/floor/floor.service';
 
 @Injectable()
 export class EventHandler {
-  constructor(private facilityService: FacilityService) {}
+  constructor(
+    private facilityService: FacilityService,
+    private floorService: FloorService,
+  ) {}
 
   async handleEvent(event: Event): Promise<Facility> {
-    console.log('yeahhh');
     switch (event.action) {
       case 'FloorEnrolled': {
-        console.log('huhu');
         return this.handleFloorEnrolledEvent(event as FloorEnrolledEvent);
       }
 

@@ -4,7 +4,7 @@ import { Model } from 'mongoose';
 
 import { Floor } from './floor.schema';
 import { CreateFloorDto } from './dto/createFloor.dto';
-import { StudentEnrolledEvent } from './events/studentEnrolled.event';
+import { FlatEnrolledEvent } from 'src/facility/events/flatEnrolled.event';
 
 @Injectable()
 export class FloorService {
@@ -22,7 +22,7 @@ export class FloorService {
     return this.facilityModel.create(dto);
   }
 
-  async enroll(event: StudentEnrolledEvent): Promise<Floor> {
+  async enroll(event: FlatEnrolledEvent): Promise<Floor> {
     return this.facilityModel.find().exec()[0];
   }
 }

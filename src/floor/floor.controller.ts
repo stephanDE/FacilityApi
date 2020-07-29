@@ -19,15 +19,12 @@ import { Cmd } from '../kafka/command.decorator';
 import { Roles } from '../auth/auth.decorator';
 import { RoleGuard } from '../auth/auth.guard';
 import { ExceptionFilter } from '../kafka/kafka.exception.filter';
-import { Command } from './commands/command';
-import { Event } from './events/event';
 import { Config } from '../config/config.interface';
 import { CommandHandler } from './commands/command.handler';
-import { EventHandler } from './events/event.handler';
-import { Evt } from '../kafka/event.decorator';
 import { Floor } from './floor.schema';
 import { FloorService } from './floor.service';
 import { CreateFloorDto } from './dto/createFloor.dto';
+import { Command } from 'src/facility/commands/command';
 
 @Controller('floor')
 @UseGuards(RoleGuard)
@@ -37,7 +34,6 @@ export class FloorController {
     @Inject('KAFKA_SERVICE') private kafkaClient: ClientKafka,
     @Inject('CONFIG') private config: Config,
     private commandHandler: CommandHandler,
-    private eventHandler: EventHandler,
     private floorService: FloorService,
   ) {}
 
@@ -56,8 +52,6 @@ export class FloorController {
       timestamp: Date.now(),
       data: floor,
     };
-
-    console.log('event wird rausgeballert');
 
     this.kafkaClient.emit(`${this.config.kafka.prefix}-facility-event`, event);
 
@@ -94,11 +88,4 @@ export class FloorController {
 
     return;
   }
-
-  /*
-  @KafkaTopic(`facility-event`)
-  async onFacilityEvent(@Evt() event: Event): Promise<void> {
-    await this.eventHandler.handleEvent(event);
-    return;
-  }*/
 }
