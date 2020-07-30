@@ -16,7 +16,7 @@ export class ConfigService {
     const auth: AuthConfig = {};
     auth.algorithms = ['RS256'];
     auth.issuer =
-      process.env.AUTH_ISSUER || 'http://94.130.56.60.xip.io/auth/realms/edu';
+      process.env.AUTH_ISSUER || 'http://keycloak.auth:8080/auth/realms/edu';
 
     auth.realm = process.env.AUTH_REALM || 'edu';
 
