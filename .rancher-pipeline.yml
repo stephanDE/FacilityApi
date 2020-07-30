@@ -18,8 +18,8 @@ stages:
     steps:
       - applyYamlConfig:
           path: ./deploy/deployment-dev.yaml
-        #- applyYamlConfig:
-        #    path: ./deploy/deployment-stag.yaml
+      - applyYamlConfig:
+          path: ./deploy/deployment-stag.yaml
         #- applyYamlConfig:
         #    path: ./deploy/deployment-prod.yaml
         when:
