@@ -12,7 +12,7 @@ export class CommandHandler {
 
   async handler(command: Command): Promise<Flat> {
     switch (command.action) {
-      case 'CreateFloor':
+      case 'CreateFlat':
         return this.handleCreateFlatCommand(command as CreateFlatCommand);
       default:
         throw new RpcException(`Unsupported command action: ${command.action}`);

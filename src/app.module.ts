@@ -1,4 +1,9 @@
-import { Module, NestModule, MiddlewareConsumer } from '@nestjs/common';
+import {
+  Module,
+  NestModule,
+  MiddlewareConsumer,
+  RequestMethod,
+} from '@nestjs/common';
 import { JwtModule } from '@nestjs/jwt';
 import { MongooseModule } from '@nestjs/mongoose';
 
@@ -10,6 +15,7 @@ import { KafkaModule } from './kafka/kafka.module';
 import { AuthModule } from './auth/auth.module';
 import { FloorModule } from './floor/floor.module';
 import { FlatModule } from './flat/flat.module';
+import { RoomModule } from './room/room.module';
 
 @Module({
   imports: [
@@ -30,6 +36,7 @@ import { FlatModule } from './flat/flat.module';
     ConfigModule.forRoot(),
     FacilityModule,
     FloorModule,
+    RoomModule,
     FlatModule,
     AuthModule,
   ],
@@ -38,6 +45,9 @@ import { FlatModule } from './flat/flat.module';
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
-    //consumer.apply(AuthMiddleware).forRoutes('/facility');
+    consumer.apply(AuthMiddleware).forRoutes({
+      path: '/facility',
+      method: RequestMethod.ALL,
+    });
   }
 }

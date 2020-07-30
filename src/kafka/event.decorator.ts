@@ -6,6 +6,7 @@ import { validate } from 'class-validator';
 import { FloorEnrolledEvent } from '../facility/events/floorEnrolled.event';
 import { Event } from '../facility/events/event';
 import { FlatEnrolledEvent } from 'src/facility/events/flatEnrolled.event';
+import { RoomEnrolledEvent } from 'src/facility/events/roomEnrolled.event';
 
 export const Evt = createParamDecorator(
   async (data: unknown, ctx: ExecutionContext): Promise<Event> => {
@@ -31,6 +32,9 @@ export const Evt = createParamDecorator(
         break;
       case 'FlatEnrolled':
         event = plainToClass(FlatEnrolledEvent, value);
+        break;
+      case 'RoomEnrolled':
+        event = plainToClass(RoomEnrolledEvent, value);
         break;
       default:
         throw new RpcException(`Unknown event action: ${value.action}`);

@@ -25,14 +25,14 @@ export class FlatService {
 
   async enroll(event: FlatEnrolledEvent): Promise<Flat> {
     const flat = await this.findOne(event.data.flatId);
-    /*
+
     this.flatModel
       .findByIdAndUpdate(
-        { _id: event.data.floorId },
-        { floors: [...floor.flats, event.data._id] },
+        { _id: event.data.flatId },
+        { rooms: [...flat.rooms, event.data._id] },
       )
       .exec();
-    */
+
     return of(flat).toPromise();
   }
 }
