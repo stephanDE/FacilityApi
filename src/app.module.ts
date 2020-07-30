@@ -45,9 +45,23 @@ import { RoomModule } from './room/room.module';
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
-    consumer.apply(AuthMiddleware).forRoutes({
-      path: '/facility',
-      method: RequestMethod.ALL,
-    });
+    consumer.apply(AuthMiddleware).forRoutes(
+      {
+        path: '/facility',
+        method: RequestMethod.ALL,
+      },
+      {
+        path: '/room',
+        method: RequestMethod.ALL,
+      },
+      {
+        path: '/flat',
+        method: RequestMethod.ALL,
+      },
+      {
+        path: '/floor',
+        method: RequestMethod.ALL,
+      },
+    );
   }
 }
