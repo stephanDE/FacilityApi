@@ -5,6 +5,9 @@ import { RpcException } from '@nestjs/microservices';
 
 import { Command } from '../facility/commands/command';
 import { CreateFacilityCommand } from '../facility/commands/createFacility.command';
+import { CreateFloorCommand } from 'src/floor/commands/createFloor.command';
+import { CreateFlatCommand } from 'src/flat/commands/createFlat.command';
+import { CreateRoomCommand } from 'src/room/commands/createRoom.command';
 
 export const Cmd = createParamDecorator(
   async (data: unknown, ctx: ExecutionContext) => {
@@ -20,6 +23,15 @@ export const Cmd = createParamDecorator(
     switch (value.action) {
       case 'CreateFacility':
         command = plainToClass(CreateFacilityCommand, value);
+        break;
+      case 'CreateFloor':
+        command = plainToClass(CreateFloorCommand, value);
+        break;
+      case 'CreateFlat':
+        command = plainToClass(CreateFlatCommand, value);
+        break;
+      case 'CreateRoom':
+        command = plainToClass(CreateRoomCommand, value);
         break;
       default:
         throw new RpcException('unknown command type');
