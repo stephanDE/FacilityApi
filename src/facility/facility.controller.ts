@@ -52,7 +52,7 @@ export class FacilityController {
     const event = {
       id: uuid(),
       type: 'event',
-      action: 'FacilityCreated',
+      action: 'FacilityEnrolled',
       timestamp: Date.now(),
       data: facility,
     };
@@ -83,7 +83,7 @@ export class FacilityController {
     const event = {
       id: uuid(),
       type: 'event',
-      action: 'FacilityCreated',
+      action: 'FacilityEnrolled',
       timestamp: Date.now(),
       data: facility,
     };
